@@ -1,7 +1,7 @@
 // code written by Seohu Yoo, Kangwon National University
 
 int bitAnd(int x, int y) {
-  return ~(~x|~y);
+	return ~(~x|~y);
 }
 
 int anyEvenBit(int x) {
@@ -9,7 +9,7 @@ int anyEvenBit(int x) {
 	answer = answer | (answer >> 8);
 	answer = answer | (answer >> 4);
 	answer = answer | (answer >> 2);
-  return answer&0x01;
+	return answer&0x01;
 }
 
 int allOddBits(int x) {
@@ -18,14 +18,14 @@ int allOddBits(int x) {
 	answer = answer & (answer >> 4);
 	answer = answer & (answer >> 2);
 	answer = answer >> 1;
-  return answer&0x01;
+	return answer&0x01;
 }
 
 int logicalShift(int x, int n) {
 	int neg = ~(1 << 31);
 	int maskZero =(neg << (!n)|0x01);
-	int mask =((maskZero>> n) << 1| 0x01);;
-  return (x >> n) & mask;
+	int mask =((maskZero>> n) << 1| 0x01);
+	return (x >> n) & mask;
 }
 
 int logicalNeg(int x) {
@@ -38,26 +38,26 @@ int logicalNeg(int x) {
 }
 
 int bitCount(int x) {
- int answer = 0;
- int filter = 0x55 + (0x55 << 8);
- int filter2 = 0x33 + (0x33 << 8);
- int filter3 = 0x0f + (0x0f << 8);
- int filter4 = 0xff + (0xff << 16);
- int filter5 = 0xff + (0xff << 8);
- filter = filter + (filter << 16);
- filter2 = filter2 + (filter2 << 16);
- filter3 = filter3 + (filter3 << 16);
- answer = x& filter;
- answer = answer + ((x>>1) & filter);
- answer = (answer & filter2) + ((answer>>2) & filter2);
- answer = (answer & filter3) + ((answer>>4) & filter3);
- answer = (answer & filter4) + ((answer>>8) & filter4);
- answer = (answer & filter5) + ((answer>>16) &filter5);
- return answer;
+ 	int answer = 0;
+ 	int filter = 0x55 + (0x55 << 8);
+ 	int filter2 = 0x33 + (0x33 << 8);
+ 	int filter3 = 0x0f + (0x0f << 8);
+ 	int filter4 = 0xff + (0xff << 16);
+ 	int filter5 = 0xff + (0xff << 8);
+ 	filter = filter + (filter << 16);
+	filter2 = filter2 + (filter2 << 16);
+ 	filter3 = filter3 + (filter3 << 16);
+ 	answer = x& filter;
+ 	answer = answer + ((x>>1) & filter);
+ 	answer = (answer & filter2) + ((answer>>2) & filter2);
+ 	answer = (answer & filter3) + ((answer>>4) & filter3);
+ 	answer = (answer & filter4) + ((answer>>8) & filter4);
+ 	answer = (answer & filter5) + ((answer>>16) &filter5);
+	return answer;
 }
 
 int tmin(void) {
-  return (1<<31);
+  	return (1<<31);
 }
 
 int isPositive(int x) {
