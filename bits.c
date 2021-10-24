@@ -1,4 +1,8 @@
-// code written by Seohu Yoo, Kangwon National University
+// Warning!
+// code written by Seohu Yoo, majoring in computer science at Kangwon National University.
+// There are several correct answers to these questions. But the best answer may be the answer you came up with yourself.
+// I am not responsible for the disadvantages of plagiarizing the code and being caught by the professor.
+// Code is not optimized, unnecessary operations may be included.
 
 int bitAnd(int x, int y) {
 	return ~(~x|~y);
@@ -47,7 +51,7 @@ int bitCount(int x) {
  	filter = filter + (filter << 16);
 	filter2 = filter2 + (filter2 << 16);
  	filter3 = filter3 + (filter3 << 16);
- 	answer = x& filter;
+ 	answer = x & filter;
  	answer = answer + ((x>>1) & filter);
  	answer = (answer & filter2) + ((answer>>2) & filter2);
  	answer = (answer & filter3) + ((answer>>4) & filter3);
