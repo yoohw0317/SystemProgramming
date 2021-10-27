@@ -1,5 +1,5 @@
 // Warning!
-// code written by Seohu Yoo, majoring in computer science at Kangwon National University.
+// Code written by Seohu Yoo, majoring in computer science at Kangwon National University.
 // There are several correct answers to these questions. But the best answer may be the answer you came up with yourself.
 // I am not responsible for the disadvantages of plagiarizing the code and being caught by the professor.
 // Code is not optimized, unnecessary operations may be included.
